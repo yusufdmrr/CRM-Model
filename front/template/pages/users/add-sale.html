@@ -1,0 +1,395 @@
+<!-- This code use for render base file -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="PHP Bootstrap Responsive Admin Web Dashboard Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="dashboard, template dashboard, Bootstrap dashboard, admin panel template, sales dashboard, Bootstrap admin panel, stocks dashboard, crm admin dashboard, ecommerce admin panel, admin template, admin panel dashboard, course dashboard, template ecommerce website, dashboard hrm, admin dashboard">
+
+    <!-- TITLE -->
+    <title> YNEX - PHP Bootstrap 5 Premium Admin & Dashboard Template </title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="../../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONS CSS -->
+    <link href="../../assets/css/icons.css" rel="stylesheet">
+
+    <!-- STYLES CSS -->
+    <link href="../../assets/css/styles.css" rel="stylesheet">
+
+    <!-- MAIN JS -->
+    <script src="../../assets/js/main.js"></script>
+
+
+    <!-- NODE WAVES CSS -->
+    <link href="../../assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- SIMPLEBAR CSS -->
+    <link rel="stylesheet" href="../../assets/libs/simplebar/simplebar.min.css">
+
+    <!-- COLOR PICKER CSS -->
+    <link rel="stylesheet" href="../../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../../assets/libs/%40simonwep/pickr/themes/nano.min.css">
+
+    <!-- CHOICES CSS -->
+    <link rel="stylesheet" href="../../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- CHOICES JS -->
+    <script src="../../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="../../js/helper/static-pages-init.js"></script>
+
+    <!-- PRISM CSS -->
+    <link rel="stylesheet" href="../../assets/libs/prismjs/themes/prism-coy.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+
+
+    <!-- SweetAlert2 CSS ve JS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- PAGE -->
+    <div class="page">
+
+        <!-- HEADER -->
+
+        <header class="app-header" id="static-header">
+
+            <!-- DİNAMİK DOLUYOR -->
+
+        </header>
+        <!-- END HEADER -->
+
+        <!-- SIDEBAR -->
+
+        <aside class="app-sidebar sticky" id="static-sidebar">
+
+            <!-- DİNAMİK DOLUYOR -->
+
+        </aside>
+
+
+        <!-- END SIDEBAR -->
+
+        <!-- MAIN-CONTENT -->
+
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <div class="container py-5">
+                    <h4 class="my-4 text-center text-primary">Yeni Satış Ekle</h4>
+                
+                    <form id="salesForm">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- 1. Kısım: Müşteri Bilgileri -->
+                                <div class="mb-4">
+                                    <h5 class="text-info">Müşteri Bilgileri</h5>
+                                    <div class="mb-3">
+                                        <label for="customer-select" class="form-label">Müşteri</label>
+                                        <select class="form-select" id="customer-select" required>
+                                            <option value="" disabled selected>Seçiniz...</option>
+                                            <!-- Dinamik müşteri seçenekleri -->
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="customer-type" class="form-label">Müşteri Türü</label>
+                                            <input type="text" class="form-control" id="customer-type" readonly>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="customer-tax-id" class="form-label">Vergi Numarası</label>
+                                            <input type="text" class="form-control" id="customer-tax-id" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="customer-address" class="form-label">Adres</label>
+                                            <input type="text" class="form-control" id="customer-address" readonly>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="customer-phone" class="form-label">Telefon Numarası</label>
+                                            <input type="text" class="form-control" id="customer-phone" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customer-email" class="form-label">E-posta Adresi</label>
+                                        <input type="email" class="form-control" id="customer-email" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-12 col-md-6">
+                                <!-- 2. Kısım: Ürün Bilgileri -->
+                                <div class="mb-4">
+                                    <h5 class="text-info">Ürün Bilgileri</h5>
+                                    <div class="mb-3">
+                                        <label for="product-select" class="form-label">Ürün</label>
+                                        <select class="form-select" id="product-select">
+                                            <option value="" disabled selected>Seçiniz...</option>
+                                            <!-- Dinamik ürün seçenekleri -->
+                                        </select>
+                                    </div>
+                
+                                    <!-- Ürün Bilgilerinin Otomatik Doldurulacağı Alanlar -->
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="product-category" class="form-label">Ürün Kategorisi</label>
+                                            <input type="text" class="form-control" id="product-category">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="product-description" class="form-label">Ürün Açıklaması</label>
+                                            <input type="text" class="form-control" id="product-description">
+                                        </div>
+                                    </div>
+                
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="product-price" class="form-label">Birim Fiyat</label>
+                                            <input type="number" class="form-control" id="product-price">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="product-currency" class="form-label">Para Birimi</label>
+                                            <input type="text" class="form-control" id="product-currency">
+                                        </div>
+                                    </div>
+                
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="product-tax-rate" class="form-label">Vergi Oranı</label>
+                                            <input type="text" class="form-control" id="product-tax-rate">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="product-tax-included" class="form-label">Vergi Dahil Mi?</label>
+                                            <input type="text" class="form-control" id="product-tax-included">
+                                        </div>
+                                    </div>
+                
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="product-stock" class="form-label">Ürün Stok</label>
+                                            <input type="text" class="form-control" id="product-stock">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="quantity" class="form-label">Miktar</label>
+                                            <input type="number" class="form-control" id="quantity">
+                                        </div>
+                                    </div>
+                
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="cost-price" class="form-label">Maliyet Fiyatı</label>
+                                            <input type="number" class="form-control" id="cost-price" disabled>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="sale-price" class="form-label">Satış Fiyatı</label>
+                                            <input type="number" class="form-control" id="sale-price">
+                                        </div>
+                                    </div>
+                
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="total-price" class="form-label">Toplam KDV Dahil Ücret</label>
+                                            <input type="number" class="form-control" id="total-price">
+                                        </div>
+                                        <div class="col-md-6 d-flex align-items-end">
+                                            <button type="button" id="add-product-button" class="btn btn-primary w-100">+ Listeye Ekle</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <hr class="my-4">
+                
+                        <!-- 3. Kısım: Ürün Listeleme ve Satış Detayları -->
+                        <div class="mb-4">
+                            <h5 class="text-info">Eklenen Ürünler</h5>
+                            <table class="table table-striped table-bordered" id="product-list">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Ürün</th>
+                                        <th>Birim Fiyatı</th>
+                                        <th>Miktar</th>
+                                        <th>Toplam KDV Dahil Ücret</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dinamik olarak eklenecek ürünler buraya gelecek -->
+                                </tbody>
+                            </table>
+                        </div>
+                
+                        <hr class="my-4">
+                
+                        <!-- 4. Kısım: Ek Maliyet ve Net Fiyat -->
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <label for="payment-plan" class="form-label">Ödeme Planı</label>
+                                <select class="form-select" id="payment-plan" required>
+                                    <option value="Tek Seferde Ödeme">Tek Seferde Ödeme</option>
+                                    <option value="İş Başlangıcı %40 / İş Bitiminde %60">İş Başlangıcı %40 / İş Bitiminde %60</option>
+                                    <option value="İş Başlangıcı %30 / İş Bitiminde %70">İş Başlangıcı %30 / İş Bitiminde %70</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="payment-status" class="form-label">Ödeme Durumu</label>
+                                <select class="form-select" id="payment-status" required>
+                                    <option value="Ödeme Bekleniyor">Ödeme Bekleniyor</option>
+                                    <option value="Kısmen Ödendi">Kısmen Ödendi</option>
+                                    <option value="Tamamlandı">Tamamlandı</option>
+                                </select>
+                            </div>
+                        </div>
+                
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="additional-costs-description" class="form-label">Ek Maliyet Açıklaması</label>
+                                <input type="text" class="form-control" id="additional-costs-description" placeholder="Açıklama">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="additional-costs-price" class="form-label">Ek Maliyet Tutarı</label>
+                                <input type="number" class="form-control" id="additional-costs-price" placeholder="Ek Maliyet Tutarı" value="0">
+                            </div>
+                        </div>
+                
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="sale-payment" class="form-label">Müşteri Ödemesi</label>
+                                <input type="number" class="form-control" id="sale-payment" placeholder="Ödenen Fiyat">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="net-price" class="form-label">Net Fiyat</label>
+                                <input type="number" class="form-control" id="net-price" placeholder="Net Fiyat" disabled>
+                            </div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Açıklama</label>
+                            <textarea class="form-control" id="description" rows="2" placeholder="Açıklama" required></textarea>
+                        </div>
+                
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-success btn-lg">Satışı Ekle</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Ek CSS -->
+                <style>
+                    .container {
+                        max-width: 1200px;
+                    }
+                    .table th, .table td {
+                        vertical-align: middle;
+                    }
+                    .form-select, .form-control {
+                        border-radius: 0.5rem;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    }
+                    .btn {
+                        border-radius: 0.5rem;
+                        font-size: 1.1rem;
+                        padding: 12px 24px;
+                    }
+                    .btn-primary {
+                        background-color: #007bff;
+                        border-color: #007bff;
+                    }
+                    .btn-primary:hover {
+                        background-color: #0056b3;
+                        border-color: #0056b3;
+                    }
+                    .btn-success {
+                        background-color: #28a745;
+                        border-color: #28a745;
+                    }
+                    .btn-success:hover {
+                        background-color: #218838;
+                        border-color: #218838;
+                    }
+                </style>
+                
+                <!-- FOOTER -->
+                <footer class="footer mt-auto py-3 bg-white text-center" id="static-footer">
+                </footer>
+                <!-- END FOOTER -->
+
+
+
+                <!-- SCROLL-TO-TOP -->
+                <div class="scrollToTop">
+                    <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+                </div>
+                <div id="responsive-overlay"></div>
+
+                <!-- POPPER JS -->
+                <script src="../../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+                <!-- BOOTSTRAP JS -->
+                <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+                <!-- NODE WAVES JS -->
+                <script src="../../assets/libs/node-waves/waves.min.js"></script>
+
+                <!-- SIMPLEBAR JS -->
+                <script src="../../assets/libs/simplebar/simplebar.min.js"></script>
+                <script src="../../assets/js/simplebar.js"></script>
+
+                <!-- COLOR PICKER JS -->
+                <script src="../../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+                <!-- DEFAULTMENU JS -->
+                <script src="../../assets/js/defaultmenu.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+                <!-- PRISM JS -->
+                <script src="../../assets/libs/prismjs/prism.js"></script>
+                <script src="../../assets/js/prism-custom.js"></script>
+
+
+                <!-- STICKY JS -->
+                <script src="../../assets/js/sticky.js"></script>
+
+                <!-- CUSTOM JS -->
+                <script src="../../assets/js/custom.js"></script>
+
+                <!-- CUSTOM-SWITCHER JS -->
+                <script src="../../assets/js/custom-switcher.js"></script>
+
+                <!-- END SCRIPTS -->
+
+                <!-- AXİOS JS-->
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+                <script src="../../js/users/add-sale.js"></script>
+
+</body>
+
+</html>
+<!-- This code use for render base file -->

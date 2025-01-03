@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="PHP Bootstrap Responsive Admin Web Dashboard Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="dashboard, template dashboard, Bootstrap dashboard, admin panel template, sales dashboard, Bootstrap admin panel, stocks dashboard, crm admin dashboard, ecommerce admin panel, admin template, admin panel dashboard, course dashboard, template ecommerce website, dashboard hrm, admin dashboard">
+
+    <!-- TITLE -->
+    <title> YNEX - PHP Bootstrap 5 Premium Admin & Dashboard Template </title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="../../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONS CSS -->
+    <link href="../../assets/css/icons.css" rel="stylesheet">
+
+    <!-- STYLES CSS -->
+    <link href="../../assets/css/styles.css" rel="stylesheet">
+
+    <!-- MAIN JS -->
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- NODE WAVES CSS -->
+    <link href="../../assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- SIMPLEBAR CSS -->
+    <link rel="stylesheet" href="../../assets/libs/simplebar/simplebar.min.css">
+
+    <!-- COLOR PICKER CSS -->
+    <link rel="stylesheet" href="../../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../../assets/libs/%40simonwep/pickr/themes/nano.min.css">
+
+    <!-- CHOICES CSS -->
+    <link rel="stylesheet" href="../../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- CHOICES JS -->
+    <script src="../../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="../../js/helper/static-pages-init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- CDN JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    .container {
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .btn {
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .btn-primary {
+        background-color: #007BFF;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+</style>
+
+</head>
+
+<body>
+    <!-- PAGE -->
+    <div class="page">
+        <!-- HEADER -->
+        <header class="app-header" id="static-header">
+            <!-- DİNAMİK DOLUYOR -->
+        </header>
+        <!-- END HEADER -->
+
+        <!-- SIDEBAR -->
+        <aside class="app-sidebar sticky" id="static-sidebar">
+            <!-- DİNAMİK DOLUYOR -->
+        </aside>
+        <!-- END SIDEBAR -->
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+                <!-- Ürün Kullanımı ve Tablosu (Yan Yana) -->
+                <div class="row">
+                    <!-- Ürün Kullanımı Grafiği -->
+                    <div class="col-md-6 mb-4">
+                        <div class="chart-container">
+                            <h5>Ürün Kullanımı (Stok Bazlı)</h5>
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Ürün Kullanımı Tablosu -->
+                    <div class="col-md-6 mb-4">
+                        <div class="chart-container" id="product-usage-table">
+                            <h5>Ürün Kullanımı Tablosu</h5>
+                            <div class="table-responsive">
+                                <table id="product-usage-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Ürün Adı</th>
+                                            <th>Adet</th>
+                                            <th>Stok Durumu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="product-usage-list"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Satış Grafiği ve Satış Aktiviteleri (Yan Yana) -->
+                <div class="row">
+                    <!-- Satış Grafiği -->
+                    <div class="col-md-6 mb-4">
+                        <div class="chart-container">
+                            <h5>Satış Grafiği (Günlük Satışlar)</h5>
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Satış Aktiviteleri Tablosu -->
+                    <div class="col-md-6 mb-4">
+                        <div class="chart-container" id="sales-activities">
+                            <h5>Satış Aktiviteleri</h5>
+                            <div class="table-responsive">
+                                <table id="sales-activity-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Şirket Adı</th>
+                                            <th>Ödeme Durumu</th>
+                                            <th>Tarih</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="sales-activity-list"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Genel Ana İçerik Alanı */
+            .main-content {
+                padding: 40px 0;
+                background-color: #f8f9fa;
+            }
+
+            /* Başlıklar */
+            .chart-container h5 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #343a40;
+            }
+
+            /* Grafik Alanları */
+            .chart-container {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Grafiklerin Konteyneri */
+            canvas {
+                width: 100% !important;
+                height: 300px !important;
+                border-radius: 8px;
+            }
+
+            /* Satır ve Kolon Düzeni */
+            .row {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .col-md-6 {
+                flex: 1;
+                min-width: 280px;
+            }
+
+            /* Tablo Stilleri */
+            .table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+
+            .table th,
+            .table td {
+                padding: 12px 18px;
+                font-size: 14px;
+                text-align: left;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+            .table th {
+                background-color: #007bff;
+                color: white;
+            }
+
+            .table tbody tr:nth-child(odd) {
+                background-color: #f9f9f9;
+            }
+
+            .table tbody tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            /* Tablo Başlıkları */
+            .table-responsive {
+                overflow-x: auto;
+                margin-top: 10px;
+            }
+
+            /* Mobil Uyumlu */
+            @media (max-width: 768px) {
+                .row {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .col-md-6 {
+                    min-width: 100%;
+                }
+
+                .chart-container h5 {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        <!-- END MAIN CONTENT -->
+
+        <!-- FOOTER -->
+        <footer class="footer mt-auto py-3 bg-white text-center" id="static-footer">
+        </footer>
+        <!-- END FOOTER -->
+    </div>
+    <!-- END PAGE -->
+    <!-- SCRIPTS -->
+    <!-- SCROLL-TO-TOP -->
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- POPPER JS -->
+    <script src="../../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- NODE WAVES JS -->
+    <script src="../../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- SIMPLEBAR JS -->
+    <script src="../../assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../../assets/js/simplebar.js"></script>
+
+    <!-- COLOR PICKER JS -->
+    <script src="../../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- DEFAULTMENU JS -->
+    <script src="../../assets/js/defaultmenu.js"></script>
+
+    <!-- INTERNAL FILE MANAGER JS -->
+    <script src="../../assets/js/file-manager.js"></script>
+
+    <!-- RATER JS -->
+    <script src="../../assets/libs/rater-js/index.js"></script>
+
+
+    <!-- STICKY JS -->
+    <script src="../../assets/js/sticky.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../../assets/js/custom.js"></script>
+
+    <!-- CUSTOM-SWITCHER JS -->
+    <script src="../../assets/js/custom-switcher.js"></script>
+
+    <!-- END SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../js/block-details.js"></script>
+
+</body>
+
+</html>
+<!-- This code use for render base file -->

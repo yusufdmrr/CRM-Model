@@ -1,0 +1,150 @@
+
+<style>
+    .header-logo img, .desktop-logo, .toggle-logo {
+        max-height: 50px;
+        object-fit: contain;
+    }
+    .main-sidebar-header {
+        background-color: #4CAF50;
+        padding: 10px;
+        color: white;
+    }
+    .main-menu-container {
+        padding: 15px;
+    }
+    .main-menu-container .slide__category {
+        font-weight: bold;
+        color: #333;
+        padding: 5px 0;
+    }
+    .main-menu .side-menu__item {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .main-menu .side-menu__item:hover {
+        background-color: #007BFF;
+        color: white;
+    }
+    .main-menu .side-menu__item .side-menu__icon {
+        margin-right: 10px;
+    }
+    footer .container {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #f1f1f1;
+    }
+    footer span.text-muted {
+        font-size: 14px;
+    }
+</style>
+
+<!-- Start::main-sidebar-header -->
+<div class="main-sidebar-header">
+    <a href="index.php.html" class="header-logo">
+        <img src="../../assets/images/logo-w.svg" alt="logo" style="width: 150%;" class="desktop-logo">
+        <img src="../../assets/images/logo-w.svg" alt="logo" style="width: 150%;" class="toggle-logo">
+        <img src="../../assets/images/logo-w.svg" alt="logo" style="width: 150%;" class="desktop-dark">
+        <img src="../../assets/images/logo-w.svg" alt="logo" style="width: 150%;" class="toggle-dark">
+        <img src="../../assets/images/logo-w.svg" alt="logo" style="width: 150%;" class="desktop-white">
+        <img src="../../assets/images/logo-w.svg" alt="logo" style="width: 150%;" class="toggle-white">
+    </a>
+</div>
+<!-- End::main-sidebar-header -->
+
+<!-- Start::main-sidebar -->
+<div class="main-sidebar" id="sidebar-scroll">
+
+    <!-- Start::nav -->
+    <nav class="main-menu-container nav nav-pills flex-column sub-open">
+        <div class="slide-left" id="slide-left">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewbox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg> -->
+        </div>
+        <ul class="main-menu">
+            <!-- Start::slide__category -->
+            <li class="slide__category" id="chat-title"><span class="category-name">Ana Sayfa</span></li>
+            <!-- End::slide__category -->
+
+            <!-- Start::slide -->
+            <li class="slide">
+                <a href="../projects/block-details.html" class="side-menu__item">
+                    <i class="fa-solid fa-house-chimney side-menu__icon text-white"></i>
+                    <span class="side-menu__label ms-1">Anasayfa</span>
+                </a>
+            </li>
+            <!-- Start::slide__category -->
+            <li class="slide__category" id="chat-title"><span class="category-name">Müşteri  İşlemleri</span></li>
+            <!-- End::slide__category -->
+
+            <!-- Start::slide -->
+            <li class="slide">
+                <a href="../projects/projects-list.html" class="side-menu__item">
+                    <i class="fa-solid fa-users side-menu__icon text-white"></i>
+                    <span class="side-menu__label ms-1">Müşteri</span>
+                </a>
+            </li>
+
+            <!-- Start::slide -->
+            <li class="slide">
+                <a href="../projects/projects.html" class="side-menu__item">
+                    <i class="fa-regular fa-money-bill-1 side-menu__icon text-white"></i>
+                    <span class="side-menu__label ms-1">Ödeme İşlemleri</span>
+                </a>
+            </li>
+
+             <!-- Start::slide__category -->
+            <li class="slide__category" id="chat-title"><span class="category-name">Ürün İşlemleri</span></li>
+            <!-- End::slide__category -->
+
+            <!-- Start::slide -->
+            <li class="slide">
+                <a href="../projects/project-budget.html" class="side-menu__item">
+                    <i class="fa-solid fa-cubes-stacked side-menu__icon text-white"></i>
+                    <span class="side-menu__label ms-1">Ürün Yönetimi</span>
+                </a>
+            </li>
+
+              <!-- Start::slide__category -->
+              <li class="slide__category" id="chat-title"><span class="category-name">Satış İşlemleri</span></li>
+              <!-- End::slide__category -->
+  
+              <!-- Start::slide -->
+              <li class="slide">
+                  <a href="../users/user-list.html" class="side-menu__item">
+                      <i class="fa-solid fa-cash-register side-menu__icon text-white"></i>
+                      <span class="side-menu__label">Satış Yönetimi</span>
+                  </a>
+              </li>
+
+            <!-- Start::slide__category -->
+             <li class="slide__category" id="chat-title"><span class="category-name">Görev</span></li> 
+            <!-- End::slide__category -->
+
+              <!-- Start::slide-->
+            <li class="slide">
+                <a href="../projects/project-expenses.html" class="side-menu__item">
+                    <i class="fa-solid fa-signal side-menu__icon text-white"></i>
+                    <span class="side-menu__label ms-1">Kar/Zarar Yönetimi</span>
+                </a>
+            </li>
+            <!-- Start::slide -->
+            <li class="slide">
+                <a href="../meeting/meeting-management.html" class="side-menu__item">
+                    <i class="fa-solid fa-list-check side-menu__icon text-white"></i>
+                    <span class="side-menu__label">Yönetim Ek </span>
+                </a>
+            </li>
+
+
+        </ul>
+        <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
+                height="24" viewbox="0 0 24 24">
+                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+            </svg></div>
+    </nav>
+    <!-- End::nav -->
+
+</div>
+<!-- End::main-sidebar -->

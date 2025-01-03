@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  
+
+  # node
+  api:
+    build: .
+    ports:
+      - 4000:3005
+    environment:
+      PORT: 3005
+      JWT_SECRET: secret
+      MONGO_URI: mongodb+srv://ali_tarhan:1997989900dD.ilk@nodeexpress.lpjvapo.mongodb.net/Jeweler?retryWrites=true&w=majority
+

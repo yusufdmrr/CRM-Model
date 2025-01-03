@@ -1,0 +1,537 @@
+<!-- This code generates the base URL for the website by combining the protocol, domain name, and directory path -->
+<!-- This code generates the base URL for the website by combining the protocol, domain name, and directory path -->
+
+<!-- This code is useful for internal styles  -->
+<!-- This code is useful for internal styles  -->
+
+<!-- This code is useful for content -->
+<!-- This code is useful for content -->
+
+<!-- This code is useful for internal scripts  -->
+<!-- This code is useful for internal scripts  -->
+
+<!-- This code use for render base file -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="PHP Bootstrap Responsive Admin Web Dashboard Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="dashboard, template dashboard, Bootstrap dashboard, admin panel template, sales dashboard, Bootstrap admin panel, stocks dashboard, crm admin dashboard, ecommerce admin panel, admin template, admin panel dashboard, course dashboard, template ecommerce website, dashboard hrm, admin dashboard">
+
+    <!-- TITLE -->
+    <title> YNEX - PHP Bootstrap 5 Premium Admin & Dashboard Template </title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="../../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONS CSS -->
+    <link href="../../assets/css/icons.css" rel="stylesheet">
+
+    <!-- STYLES CSS -->
+    <link href="../../assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="universal.css">
+
+    <!-- MAIN JS -->
+    <script src="../../assets/js/main.js"></script>
+
+
+    <!-- NODE WAVES CSS -->
+    <link href="../../assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- SIMPLEBAR CSS -->
+    <link rel="stylesheet" href="../../assets/libs/simplebar/simplebar.min.css">
+
+    <!-- COLOR PICKER CSS -->
+    <link rel="stylesheet" href="../../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../../assets/libs/%40simonwep/pickr/themes/nano.min.css">
+
+    <!-- CHOICES CSS -->
+    <link rel="stylesheet" href="../../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- CHOICES JS -->
+    <script src="../../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="../../js/helper/static-pages-init.js"></script>
+
+    <!-- CDN JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    .container {
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .btn {
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .btn-primary {
+        background-color: #007BFF;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+</style>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        color: #212529;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    .container {
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .btn {
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary {
+        background-color: #007BFF;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-collapse: collapse;
+    }
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+    .table th {
+        background-color: #f8f9fa;
+    }
+</style>
+
+</head>
+
+<body>
+    <!-- END LOADER -->
+
+    <!-- PAGE -->
+    <div class="page">
+
+        <!-- HEADER -->
+
+        <header class="app-header" id="static-header">
+
+            <!-- DİNAMİK DOLUYOR -->
+
+        </header>
+        <!-- END HEADER -->
+
+        <!-- SIDEBAR -->
+
+        <aside class="app-sidebar sticky" id="static-sidebar">
+
+            <!-- DİNAMİK DOLUYOR -->
+
+        </aside>
+
+
+        <!-- END SIDEBAR -->
+
+        <!-- MAIN-CONTENT -->
+
+        <div class="main-content app-content " style="margin-left: 0px;">
+
+            <!-- MAIN-CONTENT -->
+            <div class="main-content app-content">
+                <div class="container-fluid">
+                    <!-- Page Header -->
+                    <h4 class="page-title">Müşteri Detayları</h4>
+
+                    <!-- Müşteri Detay Sayfası -->
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="customer-company-name"> <span
+                                        id="display-company-name"></span></h5>
+                                <p class="card-text">Şirket Türü: <span id="display-company-type"></span></p>
+                                <p class="card-text">Vergi Numarası: <span id="display-tax-number"></span></p>
+                                <p class="card-text">Vergi Dairesi: <span id="display-tax-office"></span></p>
+                                <p class="card-text">Adres: <span id="display-address"></span></p>
+                                <p class="card-text">E-posta: <span id="display-email"></span></p>
+                                <p class="card-text">Telefon: <span id="display-phone"></span></p>
+                                <p class="card-text">Sektör: <span id="display-sector"></span></p>
+                                <p class="card-text">Çalışma Dili: <span id="display-working-language"></span></p>
+                                <p class="card-text">Müşteri Durumu: <span id="display-customer-status"></span></p>
+                                <p class="card-text">Notlar: <span id="display-customer-notes"></span></p>
+
+                                <h6 class="mt-4">Yetkili Kişi Bilgileri</h6>
+                                <p class="card-text">Yetkili Kişi Adı: <span id="display-authorized-person"></span></p>
+                                <p class="card-text">Yetkili Kişi Telefonu: <span id="display-authorized-phone"></span>
+                                </p>
+                                <p class="card-text">Yetkili Kişi E-posta: <span id="display-authorized-email"></span>
+                                </p>
+
+                                <div class="d-flex">
+                                    <button class="btn btn-primary me-2" id="update-customer-button">Müşteriyi Düzenle</button>
+                                    <button class="btn btn-danger me-auto" id="delete-customer-button">Müşteriyi Sil</button>
+                                    <button class="btn btn-secondary" id="go-back-button">Geri Dön</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Update Customer Modal HTML -->
+                    <div class="modal fade" id="update-customer" tabindex="-1" role="dialog"
+                        aria-labelledby="updateCustomerLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="updateCustomerLabel">Müşteri Bilgilerini Güncelle</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row gy-2">
+                                        <div class="col-xl-12">
+                                            <label for="update-company-name" class="form-label">Şirket Adı</label>
+                                            <input type="text" class="form-control" id="update-company-name"
+                                                placeholder="Şirket adı">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-company-type" class="form-label">Şirket Türü</label>
+                                            <select class="form-select" id="update-company-type">
+                                                <option value="" disabled selected>Şirket türü seçin</option>
+                                                <option value="Limited">Limited</option>
+                                                <option value="Anonim">Anonim</option>
+                                                <option value="Şahıs">Şahıs</option>
+                                                <option value="Kooperatif">Kooperatif</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-tax-number" class="form-label">Vergi Numarası</label>
+                                            <input type="text" class="form-control" id="update-tax-number"
+                                                placeholder="Vergi numarası">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-tax-office" class="form-label">Vergi Dairesi</label>
+                                            <input type="text" class="form-control" id="update-tax-office"
+                                                placeholder="Vergi Dairesi">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-address" class="form-label">Adres</label>
+                                            <input type="text" class="form-control" id="update-address"
+                                                placeholder="Adres">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-email" class="form-label">E-posta</label>
+                                            <input type="email" class="form-control" id="update-email"
+                                                placeholder="E-posta adresi">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-phone" class="form-label">Telefon</label>
+                                            <input type="text" class="form-control" id="update-phone"
+                                                placeholder="Telefon numarası">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-sector" class="form-label">Sektör</label>
+                                            <select class="form-select" id="update-sector">
+                                                <option value="" disabled selected>Sektör seçin</option>
+                                                <option value="Teknoloji">Teknoloji</option>
+                                                <option value="Sağlık">Sağlık</option>
+                                                <option value="Finans">Finans</option>
+                                                <option value="Eğitim">Eğitim</option>
+                                                <option value="Üretim">Üretim</option>
+                                                <option value="Perakende">Perakende</option>
+                                                <option value="Turizm">Turizm</option>
+                                                <option value="Gıda">Gıda</option>
+                                                <option value="Enerji">Enerji</option>
+                                                <option value="Taşımacılık">Taşımacılık</option>
+                                                <option value="İnşaat">İnşaat</option>
+                                                <option value="Medya">Medya</option>
+                                                <option value="Telekomünikasyon">Telekomünikasyon</option>
+                                                <option value="Hukuk">Hukuk</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-working-language" class="form-label">Çalışma Dili</label>
+                                            <input type="text" class="form-control" id="update-working-language"
+                                                placeholder="Çalışma dili">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-customer-status" class="form-label">Müşteri
+                                                Durumu</label>
+                                            <select class="form-select" id="update-customer-status">
+                                                <option value="" disabled selected>Durum seçin</option>
+                                                <option value="Aktif">Aktif</option>
+                                                <option value="Pasif">Pasif</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-notes" class="form-label">Notlar</label>
+                                            <textarea class="form-control" id="update-notes"
+                                                placeholder="Notlar"></textarea>
+                                        </div>
+
+                                        <!-- Authorized Person Details -->
+                                        <h6 class="mt-4">Yetkili Kişi Bilgileri</h6>
+                                        <div class="col-xl-12">
+                                            <label for="update-authorized-person" class="form-label">Adı</label>
+                                            <input type="text" class="form-control" id="update-authorized-person"
+                                                placeholder="Yetkili kişi adı">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-authorized-phone" class="form-label">Telefon</label>
+                                            <input type="text" class="form-control" id="update-authorized-phone"
+                                                placeholder="Telefon numarası">
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <label for="update-authorized-email" class="form-label">E-posta</label>
+                                            <input type="email" class="form-control" id="update-authorized-email"
+                                                placeholder="E-posta adresi">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">İptal</button>
+                                    <button type="button" class="btn btn-primary"
+                                        id="add-update-customer-button">Güncelle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        /* Genel Stil */
+                        body {
+                            font-family: 'Arial', sans-serif;
+                            background-color: #f7f9fc;
+                            color: #333;
+                        }
+
+                        /* Sayfa Başlığı */
+                        .page-title {
+                            margin: 20px 0;
+                            font-size: 1.75rem;
+                            font-weight: bold;
+                            color: #007bff;
+                        }
+
+                        /* Kart Stil */
+                        .card {
+                            border: none;
+                            border-radius: 10px;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            background-color: #ffffff;
+                            padding: 20px;
+                        }
+
+                        .card h5 {
+                            font-size: 1.5rem;
+                            color: #007bff;
+                            margin-bottom: 10px;
+                        }
+
+                        /* Düğme Stilleri */
+                        .btn-primary {
+                            background-color: #007bff;
+                            border: none;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        .btn-primary:hover {
+                            background-color: #0056b3;
+                        }
+
+                        .btn-danger {
+                            background-color: #dc3545;
+                            border: none;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        .btn-danger:hover {
+                            background-color: #b02a37;
+                        }
+
+                        /* Modal Stil */
+                        .modal-content {
+                            border-radius: 10px;
+                            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                        }
+
+                        .modal-header {
+                            background-color: #007bff;
+                            color: #ffffff;
+                            border-bottom: none;
+                            border-radius: 10px 10px 0 0;
+                        }
+
+                        .modal-title {
+                            font-weight: bold;
+                        }
+
+                        .modal-footer {
+                            border-top: none;
+                        }
+
+                        /* Input ve Select Kutuları */
+                        .form-control,
+                        .form-select {
+                            border-radius: 5px;
+                            border: 1px solid #ced4da;
+                            transition: border-color 0.3s ease;
+                        }
+
+                        .form-control:focus,
+                        .form-select:focus {
+                            border-color: #007bff;
+                            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                        }
+
+                        /* Bölüm Başlıkları */
+                        .mt-4 {
+                            font-weight: bold;
+                            color: #6c757d;
+                            border-bottom: 1px solid #ddd;
+                            padding-bottom: 5px;
+                            margin-bottom: 10px;
+                        }
+                    </style>
+
+                    <!-- FOOTER -->
+                    <footer class="footer mt-auto py-3 bg-white text-center" id="static-footer">
+
+                    </footer>
+                    <!-- END FOOTER -->
+
+                </div>
+                <!-- END PAGE-->
+
+                <!-- SCRIPTS -->
+
+
+                <!-- SCROLL-TO-TOP -->
+                <div class="scrollToTop">
+                    <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+                </div>
+                <div id="responsive-overlay"></div>
+
+                <!-- POPPER JS -->
+                <script src="../../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+                <!-- BOOTSTRAP JS -->
+                <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                <!-- NODE WAVES JS -->
+                <script src="../../assets/libs/node-waves/waves.min.js"></script>
+
+                <!-- SIMPLEBAR JS -->
+                <script src="../../assets/libs/simplebar/simplebar.min.js"></script>
+                <script src="../../assets/js/simplebar.js"></script>
+
+                <!-- COLOR PICKER JS -->
+                <script src="../../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+                <!-- DEFAULTMENU JS -->
+                <script src="../../assets/js/defaultmenu.js"></script>
+
+
+                <!-- STICKY JS -->
+                <script src="../../assets/js/sticky.js"></script>
+
+                <!-- CUSTOM JS -->
+                <script src="../../assets/js/custom.js"></script>
+
+                <!-- CUSTOM-SWITCHER JS -->
+                <script src="../../assets/js/custom-switcher.js"></script>
+
+                <!-- END SCRIPTS -->
+
+                <!-- END SCRIPTS -->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <script src="../../js/customerdetail.js"></script>
+
+
+</body>
+
+</html>
+<!-- This code use for render base file -->

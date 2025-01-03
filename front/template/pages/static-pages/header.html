@@ -1,0 +1,330 @@
+
+<style>
+    .header-logo img, .desktop-logo, .toggle-logo {
+        max-height: 50px;
+        object-fit: contain;
+    }
+    .main-sidebar-header {
+        background-color: #4CAF50;
+        padding: 10px;
+        color: white;
+    }
+    .main-menu-container {
+        padding: 15px;
+    }
+    .main-menu-container .slide__category {
+        font-weight: bold;
+        color: #333;
+        padding: 5px 0;
+    }
+    .main-menu .side-menu__item {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .main-menu .side-menu__item:hover {
+        background-color: #007BFF;
+        color: white;
+    }
+    .main-menu .side-menu__item .side-menu__icon {
+        margin-right: 10px;
+    }
+    footer .container {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #f1f1f1;
+    }
+    footer span.text-muted {
+        font-size: 14px;
+    }
+</style>
+
+<!-- Start::main-header-container -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div class="main-header-container container-fluid">
+  <!-- Start::header-content-left -->
+  <div class="header-content-left">
+    <!-- Start::header-element -->
+    <div class="header-element">
+      <div class="horizontal-logo">
+        <a href="/personel" class="header-logo">
+          <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo" />
+          <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo" />
+          <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark" />
+          <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark" />
+          <img src="../assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white" />
+          <img src="../assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white" />
+        </a>
+      </div>
+    </div>
+    <!-- End::header-element -->
+
+    <!-- Start::header-element -->
+    <div class="header-element">
+      <!-- Start::header-link -->
+      <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+        data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+      <!-- End::header-link -->
+    </div>
+    <!-- End::header-element -->
+  </div>
+  <!-- End::header-content-left -->
+
+  <!-- Start::header-content-right -->
+  <div class="header-content-right">
+    <!-- Start::header-element -->
+    <div class="header-element notifications-dropdown">
+      <!-- Start::header-link|dropdown-toggle -->
+      <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown"
+        data-bs-auto-close="outside" id="messageDropdown" aria-expanded="false">
+        <i class="fa-regular fa-bell header-link-icon"></i>
+        <span class="badge bg-secondary rounded-pill header-icon-badge pulse pulse-secondary"
+          id="notification-icon-badge">5</span>
+      </a>
+      <!-- End::header-link|dropdown-toggle -->
+      <!-- Start::main-header-dropdown -->
+      <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+        <div class="p-3">
+          <div class="d-flex align-items-center justify-content-between">
+            <p class="mb-0 fs-17 fw-semibold">Bildirimler</p>
+            <span class="badge bg-secondary-transparent" id="notifiation-data"></span>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <ul class="list-unstyled mb-0" id="header-notification-scroll">
+          <li class="dropdown-item">
+            <div class="d-flex align-items-start">
+              <div class="pe-2">
+                <span class="avatar avatar-md bg-primary-transparent avatar-rounded"><i
+                    class="ti ti-gift fs-18"></i></span>
+              </div>
+              <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="mb-0 fw-semibold">
+                    <a href="notifications.php.html">Your Order Has Been Shipped</a>
+                  </p>
+                  <span class="text-muted fw-normal fs-12 header-notification-text">Order No: 123456 Has Shipped To Your
+                    Delivery Address</span>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                      class="ti ti-x fs-16"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-item">
+            <div class="d-flex align-items-start">
+              <div class="pe-2">
+                <span class="avatar avatar-md bg-secondary-transparent avatar-rounded"><i
+                    class="ti ti-discount-2 fs-18"></i></span>
+              </div>
+              <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="mb-0 fw-semibold">
+                    <a href="notifications.php.html">Discount Available</a>
+                  </p>
+                  <span class="text-muted fw-normal fs-12 header-notification-text">Discount Available On Selected
+                    Products</span>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                      class="ti ti-x fs-16"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-item">
+            <div class="d-flex align-items-start">
+              <div class="pe-2">
+                <span class="avatar avatar-md bg-pink-transparent avatar-rounded"><i
+                    class="ti ti-user-check fs-18"></i></span>
+              </div>
+              <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="mb-0 fw-semibold">
+                    <a href="notifications.php.html">Account Has Been Verified</a>
+                  </p>
+                  <span class="text-muted fw-normal fs-12 header-notification-text">Your Account Has Been Verified
+                    Sucessfully</span>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                      class="ti ti-x fs-16"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-item">
+            <div class="d-flex align-items-start">
+              <div class="pe-2">
+                <span class="avatar avatar-md bg-warning-transparent avatar-rounded"><i
+                    class="ti ti-circle-check fs-18"></i></span>
+              </div>
+              <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="mb-0 fw-semibold">
+                    <a href="notifications.php.html">Order Placed
+                      <span class="text-warning">ID: #1116773</span></a>
+                  </p>
+                  <span class="text-muted fw-normal fs-12 header-notification-text">Order Placed Successfully</span>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                      class="ti ti-x fs-16"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown-item">
+            <div class="d-flex align-items-start">
+              <div class="pe-2">
+                <span class="avatar avatar-md bg-success-transparent avatar-rounded"><i
+                    class="ti ti-clock fs-18"></i></span>
+              </div>
+              <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="mb-0 fw-semibold">
+                    <a href="notifications.php.html">Order Delayed
+                      <span class="text-success">ID: 7731116</span></a>
+                  </p>
+                  <span class="text-muted fw-normal fs-12 header-notification-text">Order Delayed Unfortunately</span>
+                </div>
+                <div>
+                  <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i
+                      class="ti ti-x fs-16"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="p-3 empty-header-item1 border-top">
+          <div class="d-grid">
+            <a href="notifications.php.html" class="btn btn-primary">Tümünü Gör</a>
+          </div>
+        </div>
+        <div class="p-5 empty-item1 d-none">
+          <div class="text-center">
+            <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+              <i class="ri-notification-off-line fs-2"></i>
+            </span>
+            <h6 class="fw-semibold mt-3">No New Notifications</h6>
+          </div>
+        </div>
+      </div>
+      <!-- End::main-header-dropdown -->
+    </div>
+    <!-- End::header-element -->
+    <!-- Start::header-element -->
+    <div class="header-element header-theme-mode">
+      <!-- Start::header-link|layout-setting -->
+      <a href="javascript:void(0);" class="header-link layout-setting" id="themeToggle">
+        <span class="light-layout">
+          <!-- Start::header-link-icon -->
+          <i class="fa-regular fa-moon header-link-icon"></i>
+          <!-- End::header-link-icon -->
+        </span>
+        <span class="dark-layout" style="display: none;">
+          <!-- Start::header-link-icon -->
+          <i class="fa-regular fa-sun header-link-icon"></i>
+          <!-- End::header-link-icon -->
+        </span>
+      </a>
+      <!-- End::header-link|layout-setting -->
+    </div>
+
+    <style>
+      /* Sayfa Teması */
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #000000;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      /* Karanlık Tema */
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .header-link {
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .header-link-icon {
+        font-size: 20px;
+        transition: color 0.3s ease;
+      }
+
+      body.dark-mode .header-link-icon {
+        color: #ffd700;
+        /* Güneş ikonu için renk */
+      }
+    </style>
+
+    <script>
+      // Karanlık Mod Geçiş Fonksiyonu
+      const themeToggle = document.getElementById('themeToggle');
+      const lightLayout = document.querySelector('.light-layout');
+      const darkLayout = document.querySelector('.dark-layout');
+
+      themeToggle.addEventListener('click', () => {
+        // body elementine dark-mode sınıfını ekle/kaldır
+        document.body.classList.toggle('dark-mode');
+
+        // İkon görünürlüğünü ayarla
+        if (document.body.classList.contains('dark-mode')) {
+          lightLayout.style.display = 'none';
+          darkLayout.style.display = 'inline';
+        } else {
+          lightLayout.style.display = 'inline';
+          darkLayout.style.display = 'none';
+        }
+      });
+    </script>
+
+    <!-- End::header-element -->
+
+    <!-- Start::header-element -->
+    <div class="header-element">
+      <!-- Start::header-link|dropdown-toggle -->
+      <a href="javascript:void(0);" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown"
+        data-bs-auto-close="outside" aria-expanded="false">
+        <div class="d-flex align-items-center">
+          <div class="me-sm-2 me-0">
+            <img id="navbar-img" src="../../assets/images/faces/10.jpg" alt="img" width="32" height="32"
+              class="rounded-circle" />
+          </div>
+          <div class="d-sm-block d-none">
+            <p id="user-name" class="fw-semibold mb-0 lh-1">Admin</p>
+            <span id="user-departman" class="op-7 fw-normal d-block fs-11">Yusuf Demir</span>
+          </div>
+        </div>
+      </a>
+      <!-- End::header-link|dropdown-toggle -->
+      <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end"
+        aria-labelledby="mainHeaderProfile">
+        <li>
+          <button id="profile-button" class="dropdown-item d-flex">
+            <i class="fa-regular fa-user fs-18 me-2 op-7"></i>Profil
+          </button>
+        </li>
+        <li>
+          <button id="logout-button" class="dropdown-item d-flex">
+            <i class="fa-solid fa-arrow-right-from-bracket fs-18 me-2 op-7"></i><a
+              href="file:///C:/Users/Demir/Desktop/Yusuf2/yusuf/front/template/pages/users/login-page.html">Çıkış Yap</a>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- End::header-element -->
+  </div>
+  <!-- End::header-content-right -->
+</div>
+<!-- End::main-header-container -->

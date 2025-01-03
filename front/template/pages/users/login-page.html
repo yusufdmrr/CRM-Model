@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+  data-menu-styles="light" data-toggled="close">
+
+<head>
+  <!-- META DATA -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Description" content="dveb" />
+  <meta name="Author" content="Spruko Technologies Private Limited" />
+  <meta name="keywords"
+    content="dashboard, dashboard, Bootstrap dashboard, admin panel, sales dashboard, Bootstrap admin panel, stocks dashboard, crm admin dashboard, ecommerce admin panel, admin, admin panel dashboard, course dashboard, ecommerce website, dashboard hrm, admin dashboard" />
+
+  <!-- TITLE -->
+  <title>Yusuf Demir | Giriş Sayfası</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="../../assets/images/brand-logos/logo-ico.png" type="icon" />
+
+  <!-- BOOTSTRAP CSS -->
+  <link id="style" href="../../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- ICONS CSS -->
+  <link href="../../assets/css/icons.css" rel="stylesheet" />
+
+  <!-- STYLES CSS -->
+  <link href="../../assets/css/styles.css" rel="stylesheet" />
+
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- MAIN JS -->
+  <script src="../../assets/js/authentication-main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.22/dist/sweetalert2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.22/dist/sweetalert2.all.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: #111c43">
+  <div class="container">
+    <div class="row justify-content-center align-items-center authentication authentication-basic h-100">
+      <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
+        <div class="d-flex justify-content-center">
+          <a href="index.php.html">
+            <img src="../../template/assets/aebff820fd4da79db61299c3ac69bd9a.png" alt="logo" class="desktop-logo"
+              style="width: 320px;height: 200px;padding-right: 40px;padding-left: 30px;" />
+            <img src="../../template/assets/aebff820fd4da79db61299c3ac69bd9a.png" alt="logo" class="desktop-dark" />
+          </a>
+        </div>
+        <div class="card custom-card" style="background-color: rgb(240, 241, 247)">
+          <div class="card-body p-5" style="margin-top: 50px; margin-bottom: 50px;">
+            <p class="h5 fw-semibold mb-5 text-center">Giriş Yap</p>
+            <div class="row gy-4">
+              <div class="col-xl-12">
+                <input type="email" class="form-control form-control-lg" id="email"
+                  placeholder="Lütfen e-postanızı giriniz..." />
+              </div>
+              <div class="col-xl-12 mb-2">
+                <div class="input-group">
+                  <input type="password" class="form-control form-control-lg" id="signin-password"
+                    placeholder="******" />
+                  <button class="btn btn-light" type="button" onclick="createpassword('signin-password',this)"
+                    id="button-addon2">
+                    <i class="ri-eye-off-line align-middle"></i>
+                  </button>
+                </div>
+                <div class="mt-2">
+                  <div class="form-check">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Beni Hatırla?</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12 d-grid mt-2">
+                <button id="login-button" class="btn btn-lg btn-info">
+                  Giriş Yap
+                </button>
+              </div>
+            </div>
+
+            <!-- Yeni Butonlar: Şifremi Unuttum ve Kayıt Ol -->
+            <div class="d-flex justify-content-between mt-3">
+              <button class="btn btn-link text-muted" id="forgot-password-btn">Şifremi Unuttum</button>
+              <button class="btn btn-link text-muted" id="register-btn">Kayıt Ol</button>
+            </div>
+          </div>
+        </div>
+        <!-- Şifremi Unuttum Modalı -->
+        <div class="modal" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="forgotPasswordModalLabel">Şifremi Unuttum</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <label for="forgot-email">E-posta Adresi:</label>
+                <input type="email" class="form-control" id="forgot-email" placeholder="E-posta adresinizi girin"
+                  required>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" id="send-reset-email-btn">Şifre Sıfırlama E-postası
+                  Gönder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal için HTML -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Kayıt Ol</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="register-form">
+                  <div class="mb-3">
+                    <label for="register-name" class="form-label">Ad</label>
+                    <input type="text" class="form-control" id="register-name" placeholder="Adınız" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="register-surname" class="form-label">Soyad</label>
+                    <input type="text" class="form-control" id="register-surname" placeholder="Soyadınız" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="register-role" class="form-label">Rol</label>
+                    <input type="text" class="form-control" id="register-role" placeholder="Rolünüz" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="register-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="register-email" placeholder="Email Adresiniz"
+                      required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="register-password" class="form-label">Şifre</label>
+                    <input type="password" class="form-control" id="register-password" placeholder="Şifreniz"
+                      required />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                <button type="submit" class="btn btn-primary" id="register-submit-btn">Kayıt Ol</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCRIPTS -->
+
+        <!-- BOOTSTRAP JS -->
+        <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="../axios/login.js"></script>
+</body>
+
+</html>
