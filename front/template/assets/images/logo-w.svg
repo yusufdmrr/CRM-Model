@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <g fill="none" stroke="none">
+    <!-- Araba gövdesi -->
+    <rect x="16" y="40" width="96" height="32" rx="12" ry="12" fill="#2196F3"/>
+    
+    <!-- Araba farları -->
+    <circle cx="30" cy="56" r="6" fill="#FFC107"/>
+    <circle cx="98" cy="56" r="6" fill="#FFC107"/>
+    
+    <!-- Araba camları -->
+    <rect x="30" y="45" width="18" height="15" rx="4" ry="4" fill="#BBDEFB"/>
+    <rect x="80" y="45" width="18" height="15" rx="4" ry="4" fill="#BBDEFB"/>
+    
+    <!-- Araba direksiyon -->
+    <path d="M 40 40 C 45 30, 83 30, 88 40" stroke="#555" stroke-width="2" fill="transparent"/>
+    
+    <!-- Araba kaput detayı -->
+    <path d="M 40 40 C 45 20, 83 20, 88 40" stroke="#444" stroke-width="2" fill="transparent"/>
+    
+    <!-- Araba tekerlekleri -->
+    <circle cx="36" cy="84" r="10" fill="#212121"/>
+    <circle cx="92" cy="84" r="10" fill="#212121"/>
+    <circle cx="36" cy="84" r="4" fill="white"/>
+    <circle cx="92" cy="84" r="4" fill="white"/>
+    
+    <!-- Araba egzozu -->
+    <rect x="100" y="70" width="6" height="5" fill="#757575"/>
+    
+    <!-- Araba şeritleri -->
+    <path d="M 16 70 L 112 70" stroke="#fff" stroke-width="4"/>
+  </g>
+</svg>
+

@@ -1,0 +1,438 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+  data-menu-styles="dark" data-toggled="close">
+
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Description" content="PHP Bootstrap Responsive Admin Web Dashboard Template" />
+  <meta name="Author" content="Spruko Technologies Private Limited" />
+  <meta name="keywords"
+    content="dashboard, template dashboard, Bootstrap dashboard, admin panel template, sales dashboard, Bootstrap admin panel, stocks dashboard, crm admin dashboard, ecommerce admin panel, admin template, admin panel dashboard, course dashboard, template ecommerce website, dashboard hrm, admin dashboard" />
+
+  <!-- TITLE -->
+  <title>YNEX - PHP Bootstrap 5 Premium Admin & Dashboard Template</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="../../assets/images/brand-logos/favicon.ico" type="image/x-icon" />
+
+  <!-- BOOTSTRAP CSS -->
+  <link id="style" href="../../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- ICONS CSS -->
+  <link href="../../assets/css/icons.css" rel="stylesheet" />
+
+  <!-- STYLES CSS -->
+  <link rel="stylesheet" href="../meeting/refined_universal.css">
+  <link href="../../assets/css/styles.css" rel="stylesheet" />
+
+  <!-- MAIN JS -->
+  <script src="../../assets/js/main.js"></script>
+
+  <!-- NODE WAVES CSS -->
+  <link href="../../assets/libs/node-waves/waves.min.css" rel="stylesheet" />
+
+  <!-- SIMPLEBAR CSS -->
+  <link rel="stylesheet" href="../../assets/libs/simplebar/simplebar.min.css" />
+
+  <!-- COLOR PICKER CSS -->
+  <link rel="stylesheet" href="../../assets/libs/flatpickr/flatpickr.min.css" />
+  <link rel="stylesheet" href="../../assets/libs/%40simonwep/pickr/themes/nano.min.css" />
+
+  <!-- CHOICES CSS -->
+  <link rel="stylesheet" href="../../assets/libs/choices.js/public/assets/styles/choices.min.css" />
+
+  <!-- CHOICES JS -->
+  <script src="../../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <!-- CDN JS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.5.3/css/dataTables.dateTime.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+  <script src="../../js/helper/static-pages-init.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<style>
+  .project-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 246, 248);
+    z-index: 9999999;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<body>
+  <div class="bg-light d-flex justify-content-center align-items-center" id="loader">
+    <div class="row text-center">
+      <div class="col-12 d-flex justify-content-center">
+        <div id="animationContainer2" style="width: 400px; height: 400px"></div>
+      </div>
+      <div class="col-12 d-flex justify-content-center"></div>
+    </div>
+  </div>
+
+  <!-- PAGE -->
+  <div class="page">
+    <!-- HEADER -->
+
+    <header class="app-header" id="static-header">
+      <!-- DİNAMİK DOLUYOR -->
+    </header>
+    <!-- END HEADER -->
+
+    <!-- SIDEBAR -->
+
+    <aside class="app-sidebar sticky" id="static-sidebar">
+      <!-- DİNAMİK DOLUYOR -->
+    </aside>
+
+    <!-- END SIDEBAR -->
+
+    <!-- MAIN-CONTENT -->
+    <div class="main-content app-content">
+      <div class="container-fluid">
+        <!-- Üst Kısım: Seçim ve Veri Getirme -->
+        <div class="row mt-4">
+          <div class="col-xl-12">
+            <div class="card custom-card">
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                  <!-- Dropdown -->
+                  <div class="flex-grow-1 me-3">
+                    <select class="form-control" id="choices-sales-dropdown">
+                      <option value="">Satış Seçin</option>
+                      <!-- Dinamik olarak yüklenecek satışlar -->
+                    </select>
+                  </div>
+                  <!-- Getir Butonu -->
+                  <div class="d-flex" role="search">
+                    <button class="btn btn-primary" type="button" id="getSalesData">
+                      <i class="fa-solid fa-file-arrow-down me-2"></i> Getir
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Grafikler ve Genel Satış/Maliyet Tablosu -->
+        <div class="row mt-4">
+          <!-- Toplam Kar/Zarar Grafiği -->
+          <div class="col-xl-6">
+            <div class="card custom-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Toplam Kar/Zarar Grafiği</h5>
+              </div>
+              <div class="card-body">
+                <canvas id="profit-loss-chart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toplam Kar/Zarar Tablosu -->
+          <div class="col-xl-6">
+            <div class="card custom-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Toplam Kar/Zarar Tablosu</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table text-nowrap" id="profit-loss-summary-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Toplam Satış Tutarı</th>
+                        <th scope="col">Toplam Maliyet</th>
+                        <th scope="col">Toplam Kar/Zarar</th>
+                      </tr>
+                    </thead>
+                    <tbody id="profit-loss-summary-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alt Kısım: Detaylı Satış Kar Zarar Hesaplama -->
+        <div class="row mt-4">
+          <div class="col-xl-12">
+            <div class="card custom-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Satış Kar Zarar Hesaplama</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table text-nowrap" id="sales-list-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Müşteri</th>
+                        <th scope="col">Satış Tutarı</th>
+                        <th scope="col">Maliyet</th>
+                        <th scope="col">Kar/Zarar</th>
+                        <th scope="col">Tarih</th>
+                        <th scope="col">İşlemler</th>
+                      </tr>
+                    </thead>
+                    <tbody id="sales-list-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MAIN-CONTENT -->
+
+    <!-- Satış Detayları Modalı -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content rounded-4 shadow-lg">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-primary" id="detailsModalLabel">Satış Detayları</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body py-4">
+            <!-- Müşteri Bilgileri -->
+            <div class="mb-4">
+              <h6 class="text-info">Müşteri Bilgileri</h6>
+              <ul class="list-unstyled">
+                <li><strong>Şirket Adı:</strong> <span id="details-customer-name"></span></li>
+                <li><strong>Vergi Numarası:</strong> <span id="details-customer-tax-number"></span></li>
+                <li><strong>Adres:</strong> <span id="details-customer-address"></span></li>
+                <li><strong>Telefon:</strong> <span id="details-customer-phone"></span></li>
+                <li><strong>E-posta:</strong> <span id="details-customer-email"></span></li>
+              </ul>
+            </div>
+
+            <!-- Ödeme Bilgileri -->
+            <div class="mb-4">
+              <h6 class="text-info">Ödeme Bilgileri</h6>
+              <p><strong>Toplam Ödeme:</strong> <span id="details-sale-payment"></span></p>
+            </div>
+
+            <!-- Ürün Bilgileri -->
+            <div class="mb-4">
+              <h6 class="text-info">Ürün Bilgileri</h6>
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr class="table-dark">
+                    <th>Ürün Adı</th>
+                    <th>Satış Fiyatı</th>
+                    <th>Miktar</th>
+                    <th>Toplam KDV Dahil Ücret</th>
+                  </tr>
+                </thead>
+                <tbody id="details-products-list">
+                  <!-- Ürün verileri burada dinamik olarak eklenecek -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Satış Bilgileri -->
+            <div class="mb-4">
+              <h6 class="text-info">Satış Bilgileri</h6>
+              <ul class="list-unstyled">
+                <li><strong>Ödeme Planı:</strong> <span id="details-payment-plan"></span></li>
+                <li><strong>Ödeme Durumu:</strong> <span id="details-payment-status"></span></li>
+                <li><strong>Net Fiyat:</strong> <span id="details-net-price"></span></li>
+                <li><strong>Ek Maliyetler:</strong> <span id="details-additional-costs"></span></li>
+                <li><strong>Açıklama:</strong> <span id="details-description"></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer border-top-0">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Kapat</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* Genel stil */
+      .card.custom-card {
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      /* Tablo Başlıkları */
+      .table th {
+        background-color: #007bff;
+        /* Mavi arka plan */
+        color: white;
+        /* Beyaz yazı rengi */
+        text-transform: uppercase;
+        /* Başlıkları büyük harf yap */
+        font-weight: bold;
+        border-bottom: 2px solid #0056b3;
+        /* Başlık ve veri arasına mavi çizgi */
+      }
+
+      /* Tablo Verileri */
+      .table td {
+        border-bottom: 1px solid #dee2e6;
+        /* Tablo verileri arasında ince gri çizgi */
+        padding: 12px 16px;
+      }
+
+      /* Satır Arka Planı */
+      .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f8f9fa;
+        /* Hafif gri arka plan */
+      }
+
+      /* Başlık kısmı ile veri kısmı arasında ayrım */
+      .table-responsive {
+        margin-bottom: 20px;
+        /* Tabloyu alttan ayıran boşluk */
+      }
+
+      /* Card Header */
+      .card-header {
+        background-color: #007bff;
+        color: white;
+        padding: 16px 20px;
+        border-radius: 8px 8px 0 0;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Satış Bilgileri ve Modal başlıkları */
+      h6.text-info {
+        font-size: 16px;
+        font-weight: 600;
+        color: #007bff;
+        /* Mavi başlık rengi */
+        margin-bottom: 15px;
+      }
+
+      /* Modal İçeriği */
+      .modal-content {
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .modal-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .modal-body {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      /* Modal Footer */
+      .modal-footer {
+        border-top: 1px solid #dee2e6;
+      }
+
+      /* Getir Butonu */
+      #getSalesData {
+        border-radius: 0.5rem;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+
+      /* Dropdown (select) */
+      #choices-sales-dropdown {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <!-- FOOTER -->
+
+    <footer class="footer mt-auto py-3 bg-white text-center" id="static-footer"></footer>
+    <!-- END FOOTER -->
+  </div>
+  <!-- END PAGE-->
+
+  <!-- SCRIPTS -->
+
+  <!-- SCROLL-TO-TOP -->
+  <div class="scrollToTop">
+    <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+  </div>
+  <div id="responsive-overlay"></div>
+
+  <!-- POPPER JS -->
+  <script src="../../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- NODE WAVES JS -->
+  <script src="../../assets/libs/node-waves/waves.min.js"></script>
+
+  <!-- SIMPLEBAR JS -->
+  <script src="../../assets/libs/simplebar/simplebar.min.js"></script>
+  <script src="../../assets/js/simplebar.js"></script>
+
+  <!-- COLOR PICKER JS -->
+  <script src="../../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+  <!-- DEFAULTMENU JS -->
+  <script src="../../assets/js/defaultmenu.js"></script>
+
+  <!-- INTERNAL FILE MANAGER JS -->
+  <script src="../../assets/js/file-manager.js"></script>
+
+  <!-- STICKY JS -->
+  <script src="../../assets/js/sticky.js"></script>
+
+  <!-- CUSTOM JS -->
+  <script src="../../assets/js/custom.js"></script>
+  <!-- CUSTOM-SWITCHER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- APEX CHARTS JS -->
+  <script src="../../assets/libs/apexcharts/apexcharts.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+  <script src="https://cdn.datatables.net/datetime/1.5.3/js/dataTables.dateTime.min.js"></script>
+  <!-- AXİOS JS-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="../../js/projects/project-expenses.js"></script>
+  <!-- AXİOS JS-->
+
+  <script>
+    function hideLoader() {
+      const loader = document.getElementById('loader')
+      loader.classList.add('d-none')
+    }
+
+    hideLoader()
+  </script>
+</body>
+
+</html>
+<!-- This code use for render base file -->

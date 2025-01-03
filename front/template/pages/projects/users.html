@@ -1,0 +1,1473 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  data-nav-layout="vertical"
+  data-theme-mode="light"
+  data-header-styles="light"
+  data-menu-styles="dark"
+  data-toggled="close"
+>
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="Description"
+      content="PHP Bootstrap Responsive Admin Web Dashboard Template"
+    />
+    <meta name="Author" content="Spruko Technologies Private Limited" />
+    <meta
+      name="keywords"
+      content="dashboard, template dashboard, Bootstrap dashboard, admin panel template, sales dashboard, Bootstrap admin panel, stocks dashboard, crm admin dashboard, ecommerce admin panel, admin template, admin panel dashboard, course dashboard, template ecommerce website, dashboard hrm, admin dashboard"
+    />
+
+    <!-- TITLE -->
+    <title>ŞantiyePro - Kullanıcılar</title>
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="../../assets/images/brand-logos/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+      id="style"
+      href="../../assets/libs/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ICONS CSS -->
+    <link href="../../assets/css/icons.css" rel="stylesheet" />
+
+    <!-- STYLES CSS -->
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+
+    <!-- MAIN JS -->
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- NODE WAVES CSS -->
+    <link href="../../assets/libs/node-waves/waves.min.css" rel="stylesheet" />
+
+    <!-- SIMPLEBAR CSS -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/simplebar/simplebar.min.css"
+    />
+
+    <!-- COLOR PICKER CSS -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/flatpickr/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/%40simonwep/pickr/themes/nano.min.css"
+    />
+
+    <!-- CHOICES CSS -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/choices.js/public/assets/styles/choices.min.css"
+    />
+
+    <!-- CHOICES JS -->
+    <script src="../../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <script src="../../js/helper/static-pages-init.js"></script>
+  </head>
+
+  <body>
+    <!-- SWITCHER -->
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="switcher-canvas"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title text-default" id="offcanvasRightLabel">
+          Switcher
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="border-bottom border-block-end-dashed">
+          <div
+            class="nav nav-tabs nav-justified"
+            id="switcher-main-tab"
+            role="tablist"
+          >
+            <button
+              class="nav-link active"
+              id="switcher-home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#switcher-home"
+              type="button"
+              role="tab"
+              aria-controls="switcher-home"
+              aria-selected="true"
+            >
+              Theme Styles
+            </button>
+            <button
+              class="nav-link"
+              id="switcher-profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#switcher-profile"
+              type="button"
+              role="tab"
+              aria-controls="switcher-profile"
+              aria-selected="false"
+            >
+              Theme Colors
+            </button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active border-0"
+            id="switcher-home"
+            role="tabpanel"
+            aria-labelledby="switcher-home-tab"
+            tabindex="0"
+          >
+            <div class="">
+              <p class="switcher-style-head">Theme Color Mode:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-light-theme">
+                      Light
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="theme-style"
+                      id="switcher-light-theme"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-dark-theme">
+                      Dark
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="theme-style"
+                      id="switcher-dark-theme"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Directions:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-ltr">
+                      LTR
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="direction"
+                      id="switcher-ltr"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-rtl">
+                      RTL
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="direction"
+                      id="switcher-rtl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Navigation Styles:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-vertical">
+                      Vertical
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="navigation-style"
+                      id="switcher-vertical"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-horizontal">
+                      Horizontal
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="navigation-style"
+                      id="switcher-horizontal"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-menu-styles">
+              <p class="switcher-style-head">
+                Vertical & Horizontal Menu Styles:
+              </p>
+              <div class="row switcher-style gx-0 pb-2 gy-2">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-menu-click">
+                      Menu Click
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="navigation-menu-styles"
+                      id="switcher-menu-click"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-menu-hover">
+                      Menu Hover
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="navigation-menu-styles"
+                      id="switcher-menu-hover"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-icon-click">
+                      Icon Click
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="navigation-menu-styles"
+                      id="switcher-icon-click"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-icon-hover">
+                      Icon Hover
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="navigation-menu-styles"
+                      id="switcher-icon-hover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sidemenu-layout-styles">
+              <p class="switcher-style-head">Sidemenu Layout Styles:</p>
+              <div class="row switcher-style gx-0 pb-2 gy-2">
+                <div class="col-sm-6">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-default-menu">
+                      Default Menu
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="sidemenu-layout-styles"
+                      id="switcher-default-menu"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-closed-menu">
+                      Closed Menu
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="sidemenu-layout-styles"
+                      id="switcher-closed-menu"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-check switch-select">
+                    <label
+                      class="form-check-label"
+                      for="switcher-icontext-menu"
+                    >
+                      Icon Text
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="sidemenu-layout-styles"
+                      id="switcher-icontext-menu"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-icon-overlay">
+                      Icon Overlay
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="sidemenu-layout-styles"
+                      id="switcher-icon-overlay"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-detached">
+                      Detached
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="sidemenu-layout-styles"
+                      id="switcher-detached"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-double-menu">
+                      Double Menu
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="sidemenu-layout-styles"
+                      id="switcher-double-menu"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Page Styles:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-regular">
+                      Regular
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="page-styles"
+                      id="switcher-regular"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-classic">
+                      Classic
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="page-styles"
+                      id="switcher-classic"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-modern">
+                      Modern
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="page-styles"
+                      id="switcher-modern"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Layout Width Styles:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-full-width">
+                      Full Width
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="layout-width"
+                      id="switcher-full-width"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-boxed">
+                      Boxed
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="layout-width"
+                      id="switcher-boxed"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Menu Positions:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-menu-fixed">
+                      Fixed
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="menu-positions"
+                      id="switcher-menu-fixed"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-menu-scroll">
+                      Scrollable
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="menu-positions"
+                      id="switcher-menu-scroll"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Header Positions:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label class="form-check-label" for="switcher-header-fixed">
+                      Fixed
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="header-positions"
+                      id="switcher-header-fixed"
+                      checked=""
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label
+                      class="form-check-label"
+                      for="switcher-header-scroll"
+                    >
+                      Scrollable
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="header-positions"
+                      id="switcher-header-scroll"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="switcher-style-head">Loader:</p>
+              <div class="row switcher-style gx-0">
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label
+                      class="form-check-label"
+                      for="switcher-loader-enable"
+                    >
+                      Enable
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="page-loader"
+                      id="switcher-loader-enable"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check switch-select">
+                    <label
+                      class="form-check-label"
+                      for="switcher-loader-disable"
+                    >
+                      Disable
+                    </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="page-loader"
+                      id="switcher-loader-disable"
+                      checked=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade border-0"
+            id="switcher-profile"
+            role="tabpanel"
+            aria-labelledby="switcher-profile-tab"
+            tabindex="0"
+          >
+            <div>
+              <div class="theme-colors">
+                <p class="switcher-style-head">Menu Colors:</p>
+                <div class="d-flex switcher-style pb-2">
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-white"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Light Menu"
+                      type="radio"
+                      name="menu-colors"
+                      id="switcher-menu-light"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-dark"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Dark Menu"
+                      type="radio"
+                      name="menu-colors"
+                      id="switcher-menu-dark"
+                      checked=""
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Color Menu"
+                      type="radio"
+                      name="menu-colors"
+                      id="switcher-menu-primary"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-gradient"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Gradient Menu"
+                      type="radio"
+                      name="menu-colors"
+                      id="switcher-menu-gradient"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-transparent"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Transparent Menu"
+                      type="radio"
+                      name="menu-colors"
+                      id="switcher-menu-transparent"
+                    />
+                  </div>
+                </div>
+                <div class="px-4 pb-3 text-muted fs-11">
+                  Note:If you want to change color Menu dynamically change from
+                  below Theme Primary color picker
+                </div>
+              </div>
+              <div class="theme-colors">
+                <p class="switcher-style-head">Header Colors:</p>
+                <div class="d-flex switcher-style pb-2">
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-white"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Light Header"
+                      type="radio"
+                      name="header-colors"
+                      id="switcher-header-light"
+                      checked=""
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-dark"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Dark Header"
+                      type="radio"
+                      name="header-colors"
+                      id="switcher-header-dark"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Color Header"
+                      type="radio"
+                      name="header-colors"
+                      id="switcher-header-primary"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-gradient"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Gradient Header"
+                      type="radio"
+                      name="header-colors"
+                      id="switcher-header-gradient"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-transparent"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Transparent Header"
+                      type="radio"
+                      name="header-colors"
+                      id="switcher-header-transparent"
+                    />
+                  </div>
+                </div>
+                <div class="px-4 pb-3 text-muted fs-11">
+                  Note:If you want to change color Header dynamically change
+                  from below Theme Primary color picker
+                </div>
+              </div>
+              <div class="theme-colors">
+                <p class="switcher-style-head">Theme Primary:</p>
+                <div class="d-flex flex-wrap align-items-center switcher-style">
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary-1"
+                      type="radio"
+                      name="theme-primary"
+                      id="switcher-primary"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary-2"
+                      type="radio"
+                      name="theme-primary"
+                      id="switcher-primary1"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary-3"
+                      type="radio"
+                      name="theme-primary"
+                      id="switcher-primary2"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary-4"
+                      type="radio"
+                      name="theme-primary"
+                      id="switcher-primary3"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-primary-5"
+                      type="radio"
+                      name="theme-primary"
+                      id="switcher-primary4"
+                    />
+                  </div>
+                  <div
+                    class="form-check switch-select ps-0 mt-1 color-primary-light"
+                  >
+                    <div class="theme-container-primary"></div>
+                    <div class="pickr-container-primary"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="theme-colors">
+                <p class="switcher-style-head">Theme Background:</p>
+                <div class="d-flex flex-wrap align-items-center switcher-style">
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-bg-1"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-background"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-bg-2"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-background1"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-bg-3"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-background2"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-bg-4"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-background3"
+                    />
+                  </div>
+                  <div class="form-check switch-select me-3">
+                    <input
+                      class="form-check-input color-input color-bg-5"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-background4"
+                    />
+                  </div>
+                  <div
+                    class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent"
+                  >
+                    <div class="theme-container-background"></div>
+                    <div class="pickr-container-background"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-image mb-3">
+                <p class="switcher-style-head">Menu With Background Image:</p>
+                <div class="d-flex flex-wrap align-items-center switcher-style">
+                  <div class="form-check switch-select m-2">
+                    <input
+                      class="form-check-input bgimage-input bg-img1"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-bg-img"
+                    />
+                  </div>
+                  <div class="form-check switch-select m-2">
+                    <input
+                      class="form-check-input bgimage-input bg-img2"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-bg-img1"
+                    />
+                  </div>
+                  <div class="form-check switch-select m-2">
+                    <input
+                      class="form-check-input bgimage-input bg-img3"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-bg-img2"
+                    />
+                  </div>
+                  <div class="form-check switch-select m-2">
+                    <input
+                      class="form-check-input bgimage-input bg-img4"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-bg-img3"
+                    />
+                  </div>
+                  <div class="form-check switch-select m-2">
+                    <input
+                      class="form-check-input bgimage-input bg-img5"
+                      type="radio"
+                      name="theme-background"
+                      id="switcher-bg-img4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between canvas-footer flex-wrap">
+            <a
+              href="https://themeforest.net/item/ynex-php-admin-dashboard-template/48398228"
+              class="btn btn-primary m-1"
+              target="_blank"
+              >Buy Now</a
+            >
+            <a
+              href="https://themeforest.net/user/spruko/portfolio"
+              class="btn btn-secondary m-1"
+              target="_blank"
+              >Our Portfolio</a
+            >
+            <a
+              href="javascript:void(0);"
+              id="reset-all"
+              class="btn btn-danger m-1"
+              >Reset</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SWITCHER -->
+
+    <!-- LOADER -->
+    <div
+      class="bg-light d-flex justify-content-center align-items-center"
+      id="loader"
+    >
+      <div class="row text-center">
+        <div class="col-12 d-flex justify-content-center">
+          <div
+            id="animationContainer"
+            style="width: 400px; height: 400px"
+          ></div>
+        </div>
+        <div class="col-12 d-flex justify-content-center"></div>
+      </div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- PAGE -->
+    <div class="page">
+      <!-- HEADER -->
+
+      <header class="app-header" id="static-header">
+        <!-- DİNAMİK DOLUYOR -->
+      </header>
+      <!-- END HEADER -->
+
+      <!-- SIDEBAR -->
+
+      <aside class="app-sidebar sticky" id="static-sidebar">
+        <!-- DİNAMİK DOLUYOR -->
+      </aside>
+
+      <!-- END SIDEBAR -->
+
+      <!-- MAIN-CONTENT -->
+      <!-- 
+            <div class="main-content app-content">
+
+                <div class="container-fluid"> -->
+
+      <!-- Page Header -->
+      <!-- <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                        <h1 class="page-title fw-semibold fs-18 mb-0">Kullanıcı Listesi</h1>
+                        <div class="ms-md-1 ms-0">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Kullanıcılar</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Kullanıcı Listesi</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div> -->
+      <!-- Page Header Close -->
+
+      <!-- Start:: row-1 -->
+      <!-- <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card custom-card">
+                                <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-3">
+                                    <div class="card-title">
+                                        Kullanıcı Listesi
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <button class="btn btn-info btn-sm" id="add-user-button" data-bs-toggle="modal" data-bs-target="#add-user-modal"><i class="fa-solid fa-users-gear me-1 fw-semibold align-middle"></i>Kullanıcı Ekle</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table text-nowrap table-bordered">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Ad</th>
+                                                        <th scope="col">Soyad</th>
+                                                        <th scope="col">Rol</th>
+                                                        <th scope="col">Kayıt Tarihi</th>
+                                                        <th scope="col">İşlemler</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="users-table-body">
+                                                    <tr>
+                                                        <td>Ali</td>
+                                                        <td>Yılmaz</td>
+                                                        <td>Yönetici</td>
+                                                        <td>12.01.2023</td>
+                                                        <td>
+                                                            <button class="btn btn-primary">Düzenle</button>
+                                                            <button class="btn btn-danger">Sil</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ayşe</td>
+                                                        <td>Demir</td>
+                                                        <td>Personel</td>
+                                                        <td>05.03.2023</td>
+                                                        <td>
+                                                            <button class="btn btn-primary">Düzenle</button>
+                                                            <button class="btn btn-danger">Sil</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mehmet</td>
+                                                        <td>Kara</td>
+                                                        <td>Yönetici</td>
+                                                        <td>18.07.2023</td>
+                                                        <td>
+                                                            <button class="btn btn-primary">Düzenle</button>
+                                                            <button class="btn btn-danger">Sil</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Zeynep</td>
+                                                        <td>Çelik</td>
+                                                        <td>Personel</td>
+                                                        <td>22.09.2023</td>
+                                                        <td>
+                                                            <button class="btn btn-primary">Düzenle</button>
+                                                            <button class="btn btn-danger">Sil</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ahmet</td>
+                                                        <td>Şahin</td>
+                                                        <td>Stajyer</td>
+                                                        <td>10.11.2023</td>
+                                                        <td>
+                                                            <button class="btn btn-primary">Düzenle</button>
+                                                            <button class="btn btn-danger">Sil</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+      <!-- Start:: row-8 -->
+      <!-- <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card custom-card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Hidden Columns
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="grid-hidden-column"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+      <!-- End:: row-8 -->
+      <!-- End:: row-1 -->
+      <!-- </div>
+
+            </div>  -->
+      <!-- END MAIN-CONTENT -->
+
+      <!-- EDİT-MODAL -->
+
+      <div
+        class="modal fade"
+        id="add-user-modal"
+        tabindex="-1"
+        aria-labelledby="add-user-modal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">Düzenle</h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                  <label for="input-text" class="form-label">Proje Adı</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input-text"
+                    placeholder="Ad"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END EDİT-MODAL -->
+
+      <!-- MAIN-CONTENT -->
+
+      <div class="main-content app-content">
+        <div class="container-fluid">
+          <!-- Page Header -->
+          <div
+            class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb"
+          >
+            <h1 class="page-title fw-semibold fs-18 mb-0">Tüm Kullanıcılar</h1>
+            <div class="ms-md-1 ms-0">
+              <nav>
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item">
+                    <a href="javascript:void(0);">Kullanıcılar</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Kullanıcı Listesi
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <!-- Page Header Close -->
+
+          <!-- Start:: row-1 -->
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Tüm Kullanıcılar</div>
+                  <button
+                    class="btn btn-sm btn-primary-light"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addModalLgLabel"
+                  >
+                    Yeni Ekle
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">Ad</th>
+                          <th scope="col">Soyad</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Kayıt Tarihi</th>
+                          <th scope="col">Rol</th>
+                          <th scope="col">İşlem</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center fw-semibold">
+                              <span
+                                class="avatar avatar-sm me-2 avatar-rounded"
+                              >
+                                <img
+                                  src="../../assets/images/worker-builder-construction-hard-hat-jobsite-architecture-work-svgrepo-com.png"
+                                  alt="img"
+                                /> </span
+                              >Halil
+                            </div>
+                          </th>
+                          <td>Kaya</td>
+                          <td>halil@dveb.com.tr</td>
+                          <td>10.02.2024</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Şef</span
+                            >
+                          </td>
+                          <td>
+                            <div class="hstack gap-2 flex-wrap">
+                              <a
+                                href="javascript:void(0);"
+                                class="text-info fs-14 lh-1"
+                                ><i
+                                  class="fa-regular fa-pen-to-square"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#editModalLg"
+                                ></i
+                              ></a>
+                              <a
+                                href="javascript:void(0);"
+                                class="text-danger fs-14 lh-1"
+                                ><i class="fa-solid fa-trash"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center fw-semibold">
+                              <span
+                                class="avatar avatar-sm me-2 avatar-rounded"
+                              >
+                                <img
+                                  src="../../assets/images/business-man-svgrepo-com.svg"
+                                  alt="img"
+                                /> </span
+                              >Berfin
+                            </div>
+                          </th>
+                          <td>Kale</td>
+                          <td>berfin@dveb.com.tr</td>
+                          <td>10.11.2023</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Admin</span
+                            >
+                          </td>
+                          <td>
+                            <div class="hstack gap-2 flex-wrap">
+                              <a
+                                href="javascript:void(0);"
+                                class="text-info fs-14 lh-1"
+                                ><i
+                                  class="fa-regular fa-pen-to-square"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#editModalLg"
+                                ></i
+                              ></a>
+                              <a
+                                href="javascript:void(0);"
+                                class="text-danger fs-14 lh-1"
+                                ><i class="fa-solid fa-trash"></i
+                              ></a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End:: row-1 -->
+        </div>
+      </div>
+      <!-- END MAIN-CONTENT -->
+
+      <!-- EDİT-MODAL -->
+
+      <div
+        class="modal fade"
+        id="editModalLg"
+        tabindex="-1"
+        aria-labelledby="editModalLgLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">Kullanıcı Düzenle</h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-12">
+                  <label for="edit-name" class="form-label">Ad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="edit-name"
+                    placeholder="Ad"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="edit-surname" class="form-label">Soyad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="edit-surname"
+                    placeholder="Soyad"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="edit-role" class="form-label">Rol</label>
+                  <select class="form-select" id="edit-role">
+                    <option selected="">Seçiniz...</option>
+                    <option value="admin">Admin</option>
+                    <option value="chef">Şef</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="edit-email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="edit-email"
+                    placeholder="admin@mail.com"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="edit-password" class="form-label">Şifre</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="edit-password"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div
+                class="mt-4 d-flex justify-content-between align-items-center w-100"
+              >
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="accept-update-user"
+                >
+                  Güncelle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END EDİT-MODAL -->
+      <!-- ADD MODAL -->
+      <div
+        class="modal fade"
+        id="addModalLgLabel"
+        tabindex="-1"
+        aria-labelledby="addModalLgLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="addModalLgLabel">
+                Yeni Kullanıcı Ekle
+              </h6>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-12">
+                  <label for="name" class="form-label">Ad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Ad"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="surname" class="form-label">Soyad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="surname"
+                    placeholder="Soyad"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="role" class="form-label">Rol</label>
+                  <select class="form-select" id="role">
+                    <option selected="">Seçiniz...</option>
+                    <option value="admin">Admin</option>
+                    <option value="chef">Şef</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email@xyz.com"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="password" class="form-label">Şifre</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div
+                class="mt-4 d-flex justify-content-between align-items-center w-100"
+              >
+                <button type="button" class="btn btn-secondary" id="add-user">
+                  Kaydet
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END ADD-MODAL -->
+
+      <!-- FOOTER -->
+
+      <footer
+        class="footer mt-auto py-3 bg-white text-center"
+        id="static-footer"
+      ></footer>
+      <!-- END FOOTER -->
+    </div>
+    <!-- END PAGE-->
+
+    <!-- SCRIPTS -->
+
+    <script>
+      var animation = lottie.loadAnimation({
+        container: document.getElementById('animationContainer'), // Animasyonun yükleneceği element
+        renderer: 'svg', // Render tipi
+        loop: true, // Döngü
+        autoplay: true, // Otomatik oynatma
+        path: '../../assets/images/Animation - 1722704785504.json', // JSON animasyon dosyasının yolu
+      })
+    </script>
+
+    <!-- SCROLL-TO-TOP -->
+    <div class="scrollToTop">
+      <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- POPPER JS -->
+    <script src="../../assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- NODE WAVES JS -->
+    <script src="../../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- SIMPLEBAR JS -->
+    <script src="../../assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../../assets/js/simplebar.js"></script>
+
+    <!-- COLOR PICKER JS -->
+    <script src="../../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- DEFAULTMENU JS -->
+    <script src="../../assets/js/defaultmenu.js"></script>
+
+    <!-- STICKY JS -->
+    <script src="../../assets/js/sticky.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../../assets/js/custom.js"></script>
+
+    <!-- CUSTOM-SWITCHER JS -->
+    <script src="../../assets/js/custom-switcher.js"></script>
+
+    <!-- GRID JS -->
+    <script src="../../assets/libs/gridjs/gridjs.umd.js"></script>
+
+    <!-- END SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../js/users.js"></script>
+  </body>
+</html>
+<!-- This code use for render base file -->
